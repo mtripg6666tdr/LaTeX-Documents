@@ -1,0 +1,46 @@
+\documentclass{jsarticle}
+\usepackage{changepage,amsmath,amssymb,ascmac}
+\usepackage{fancybox}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{indentfirst}
+\newenvironment{indentblock}{\begin{adjustwidth}{\parindent}{}\hspace{-\parindent}}{\end{adjustwidth}}
+
+\begin{document}
+  \begin{screen}
+    \ovalbox{問題} \\
+    正の整数$a$, $b$, $c$, $d$について$a^3=b^2$, $c^3=d^2$, $c-a=9$ がなりたつとき、整数$a$,$b$,$c$,$d$の値を求めよ。
+  \end{screen}
+  \\
+  \dotfill
+
+  \ovalbox{解説} \\
+  $a^3=b^2$より、$b=a^\frac{3}{2}=a\sqrt{a}$であるから、$b$が整数の時、$a$は平方数で表せる。\\
+  \begin{itembox}[l]{なぜ$a$が平方数となるのか}
+    まず$b$は問題文で定義されている通り整数で、$a$も同様に整数であるから、$\sqrt{a}$も整数となる。
+    平方根が整数になるとき、$a$は平方数である。
+    \[b=\sqrt{a} \iff b^2=a\]
+  \end{itembox}
+  $c$についても同様に平方数であるから、
+  \[a=x^2, c=y^2\]
+  と表せる。
+  $c-a=9$より、$y^2-x^2=9$となる。
+  また$c>a$であるから、$y>x$\\
+  \[\therefore (y+x)(y-x)=9\] \\
+  $x$、$y$は整数であるから、$y+x$、$y-x$も整数である。\\
+  かつ、$y+x$、$y-x$はともに正
+  ($\because y+x$は整数同士の足し算,$y-x$は$y>x$でかつ整数同士の引き算)\\
+  $\therefore y+x>y-x$より、$ y+x$、$y-x$の考えられる組み合わせは、\\
+  \[(y+x, y-x)=(9,1)\]
+  したがって、\\
+  \[x=5, y=4\]
+  よって、\\
+  \[a=25, c=16\]
+  $a^3=b^2$, $c^3=d^2$により、\\
+  \[b=125, d=64\]
+  \\
+  \ovalbox{解答}\\
+  $a=25$\\
+  $b=125$\\
+  $c=16$\\
+  $d=64$\\
+\end{document}
